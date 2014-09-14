@@ -1,6 +1,6 @@
 {
   "name": "canvas-grid",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "draw canvas grid and react to events",
   "main": "index.js",
   "scripts": {
