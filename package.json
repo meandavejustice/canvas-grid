@@ -1,16 +1,28 @@
 {
   "name": "canvas-grid",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "draw canvas grid and react to events",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meandavejustice/canvas-grid.git"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
   "keywords": [
     "canvas",
     "grid",
     "events"
   ],
   "author": "meandave",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "canvas-pixel-color": "^1.0.1"
+  }
 }

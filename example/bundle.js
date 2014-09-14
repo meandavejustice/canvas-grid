@@ -1,3 +1,29 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+var CanvasGrid = require('../index.js');
+
+var cvs = document.getElementById('grid');
+var grid = new CanvasGrid(cvs, {
+  borderColor: '#777'
+});
+
+var activeColor = '#ff0beb';
+
+grid.drawMatrix({
+  x: 16,
+  y: 4
+});
+
+cvs.addEventListener('click', function(ev) {
+  console.log('Attached: "ev.cursorPos"', ev.cursorPos);
+  console.log('Attached: "ev.gridInfo"', ev.gridInfo);
+
+  if (ev.gridInfo.color.hex !== activeColor) {
+    grid.fillSection(ev.gridInfo.x, ev.gridInfo.y, activeColor);
+  } else {
+    grid.clearSection(ev.gridInfo.x, ev.gridInfo.y);
+  }
+});
+},{"../index.js":2}],2:[function(require,module,exports){
  var cPc = require('canvas-pixel-color');
 
 function CanvasGrid(canvas, borderColor) {
@@ -76,3 +102,25 @@ CanvasGrid.prototype = {
 };
 
 module.exports = CanvasGrid;
+},{"canvas-pixel-color":3}],3:[function(require,module,exports){
+function canvasPixelColor(ev, context) {
+  var x = ev.offsetX || ev.layerX;
+  var y = ev.offsetY || ev.layerY;
+  var data = context.getImageData(x, y, 1, 1).data;
+  var r = data[0];
+  var g = data[1];
+  var b = data[2];
+  var a = data[3];
+
+  return {
+    hex: rgbToHex(r, g, b),
+    rgba: [r,g,b,a]
+  }
+}
+
+function rgbToHex(r, g, b) {
+  return "#" + (16777216 | b | (g << 8) | (r << 16)).toString(16).slice(1);
+}
+
+module.exports = canvasPixelColor;
+},{}]},{},[1])
