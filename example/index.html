@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+
+      <canvas width="750" height="200" id="grid"></canvas>
+      <script src="../index.js"></script>
+
+      <script>
+       var cvs = document.getElementById('grid');
+
+       var grid = new canvasGrid(cvs, {});
+
+       grid.drawMatrix({
+         x: 16,
+         y: 4
+       });
+      </script>
+    </body>
+</html>

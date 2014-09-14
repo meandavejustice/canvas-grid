@@ -1,0 +1,16 @@
+{
+  "name": "canvas-grid",
+  "version": "1.0.0",
+  "description": "draw canvas grid and react to events",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "canvas",
+    "grid",
+    "events"
+  ],
+  "author": "meandave",
+  "license": "MIT"
+}
