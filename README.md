@@ -1,6 +1,6 @@
 # Canvas-grid
 
-[![NPM](https://nodei.co/npm/canvas-grid.png?downloads=true)](https://npmjs.com/package/canvas-grid)
+[![NPM](https://nodei.co/npm/canvas-grid.png?downloads=true)](https://npmjs.org/package/canvas-grid)
 
 Draw a grid on canvas and be able to interact with rows, and columns as well as
 get data about the grid.
