@@ -39,7 +39,7 @@ Available Methods:
 * clearSection: args[columnNumber, rowNumber]
 
 ## Example
-(requirebin)[http://requirebin.com/?gist=e3bcb7c64041c80ce2da] thanks @maxogden!
+[requirebin](http://requirebin.com/?gist=e3bcb7c64041c80ce2da) thanks @maxogden!
 
 ## License
 MIT
