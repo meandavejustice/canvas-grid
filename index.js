@@ -1,4 +1,4 @@
- var cPc = require('canvas-pixel-color');
+var cPc = require('canvas-pixel-color');
 
 function CanvasGrid(canvas, borderColor) {
   this.canvas = canvas;
@@ -6,16 +6,11 @@ function CanvasGrid(canvas, borderColor) {
 
   this.borderColor = borderColor || '#000000';
 
-  this.cvsPos = {
-    x: this.canvas.offsetLeft,
-    y: this.canvas.offsetTop
-  };
-
   var self = this;
   this.canvas.addEventListener('click', function(ev) {
     var pos = {
-        x: ev.x + self.cvsPos.x,
-        y: ev.y + self.cvsPos.y
+        x: ev.offsetX || ev.layerX,
+        y: ev.offsetY || ev.layerY
     };
 
     ev.cursorPos = pos;
