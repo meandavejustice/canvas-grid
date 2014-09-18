@@ -23,8 +23,8 @@ CanvasGrid.prototype = {
   lookup: function(pos) {
     // these are zero indexed, since they are most
     // likely representing an array/matrix.
-    var x = Math.round(pos.x / this.rowWidth) - 1;
-    var y = Math.round(pos.y / this.columnHeight) - 1;
+    var x = Math.floor(pos.x / this.rowWidth);
+    var y = Math.floor(pos.y / this.columnHeight);
     return {
       x: x,
       y: y,
