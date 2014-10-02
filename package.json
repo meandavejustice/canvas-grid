@@ -1,10 +1,12 @@
 {
   "name": "canvas-grid",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "draw canvas grid and react to events",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-js": "browserify example.js > bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages-deploy"
   },
   "repository": {
     "type": "git",
@@ -20,9 +22,16 @@
     "grid",
     "events"
   ],
+  "gh-pages-deploy": {
+    "prep": [
+      "build-js"
+    ],
+    "noprompt": true
+  },
   "author": "meandave",
   "license": "MIT",
   "dependencies": {
-    "canvas-pixel-color": "^1.0.1"
+    "canvas-pixel-color": "^1.0.1",
+    "gh-pages-deploy": "^0.1.1"
   }
 }

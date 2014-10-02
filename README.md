@@ -39,7 +39,7 @@ Available Methods:
 * clearCell: args[columnNumber, rowNumber]
 
 ## Example
-[requirebin](http://requirebin.com/?gist=e3bcb7c64041c80ce2da) thanks @maxogden!
+[http://davejustice.com/canvas-grid](http://davejustice.com/canvas-grid)
 
 ## License
 MIT
