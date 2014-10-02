@@ -1,4 +1,4 @@
-var CanvasGrid = require('canvas-grid');
+var CanvasGrid = require('./index.js');
 
 var cvs = document.getElementById('grid');
 var grid = new CanvasGrid(cvs, {
