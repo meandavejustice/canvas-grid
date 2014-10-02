@@ -25,18 +25,18 @@ grid.drawMatrix({
 
 cvs.addEventListener('click', function(ev) {
   if (ev.gridInfo.color.hex !== activeColor) {
-    grid.fillSection(ev.gridInfo.x, ev.gridInfo.y, activeColor);
+    grid.fillCell(ev.gridInfo.x, ev.gridInfo.y, activeColor);
   } else {
-    grid.clearSection(ev.gridInfo.x, ev.gridInfo.y);
+    grid.clearCell(ev.gridInfo.x, ev.gridInfo.y);
   }
 });
   
 ```
 Available Methods:
-* drawRow: args[canvasContext, x(number of columns), y(total number of rows including this one), index(row number)]; **changing soon**
+* drawRow: args[y axis, # of columns, width of cells];
 * drawMatrix: args[Object with attrs "x"(# of columns) & "y"(# of rows)]
-* fillSection: args[columnNumber, rowNumber, color(string, hex or rgba)]
-* clearSection: args[columnNumber, rowNumber]
+* fillCell: args[columnNumber, rowNumber, color(string, hex or rgba)]
+* clearCell: args[columnNumber, rowNumber]
 
 ## Example
 [requirebin](http://requirebin.com/?gist=e3bcb7c64041c80ce2da) thanks @maxogden!
