@@ -31,7 +31,9 @@
   "author": "meandave",
   "license": "MIT",
   "dependencies": {
-    "canvas-pixel-color": "^1.0.1",
+    "canvas-pixel-color": "^1.0.1"
+  },
+  "devDependencies": {
     "gh-pages-deploy": "^0.1.1"
   }
 }
